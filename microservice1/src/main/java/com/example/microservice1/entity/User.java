@@ -10,28 +10,36 @@ public class User {
 
     @Id // 标注主键
     @GeneratedValue(strategy = GenerationType.IDENTITY) // 自动生成ID
-    private Long id;
-
-    private String username;
+    private Long user_id;
+    private String first;
+    private String last;
     private String email;
     private String password;
-    private String role;
+    private Long role_id;
 
     // Getters and Setters
     public Long getId() {
-        return id;
+        return user_id;
     }
 
     public void setId(Long id) {
-        this.id = id;
+        this.user_id = user_id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getFirst() {
+        return first;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setFisrt(String first) {
+        this.first = first;
+    }
+
+    public String getLast() {
+        return last;
+    }
+
+    public void setLast(String last) {
+        this.last = last;
     }
 
     public String getEmail() {
@@ -50,11 +58,11 @@ public class User {
         this.password = password;
     }
 
-    public String getRole() {
-        return role;
+    public Long getRole() {
+        return role_id;
     }
 
-    public void setRole(String role) {
-        this.role = role;
+    public void setRole(Long role_id) {
+        this.role_id = role_id;
     }
 }
